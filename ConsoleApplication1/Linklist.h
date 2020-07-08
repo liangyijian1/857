@@ -59,11 +59,11 @@ Linklist GetElem(Linklist L, int i) {				//取出单链表中第i个节点
 	
 }
 
-void Insert_LNode(Linklist L, int i, int x) {
+void Insert_LNode(Linklist L, int i, ElemType x) {
 	Linklist p, q;
-	p = L->Next;
-	int j = 1;
-	while (p != NULL && j < i-1) {
+	p = L;
+	int j = 0;
+	while (p && j < i-1) {
 		p = p->Next;
 		j++;
 	}
@@ -75,4 +75,49 @@ void Insert_LNode(Linklist L, int i, int x) {
 		q->Next = p->Next;
 		p->Next = q;
 	}
+}
+
+
+Linklist GetElem_2(Linklist L, ElemType e) {
+	Linklist p = L->Next;
+	while (p && p->data != e)
+		p = p->Next;
+	return p;
+}
+
+
+bool Del_List(Linklist L, int i) {
+	Linklist p=L,q;
+	int j = 0;
+	while (p && j < i-1) {
+		p = p->Next;
+		j++;
+	}
+	if (!p || j > i-1)
+		return false;
+	q = p->Next;
+	p->Next = q->Next;
+	free(q);
+	return true;
+}
+
+
+void Merge_list(Linklist La, Linklist Lb, Linklist Lc) {
+	Linklist pa=La->Next, pb=Lb->Next, pc;
+	Lc = pc = La;
+	while (pa && pb) {
+		if (pa->data < pb->data) {
+			pc->Next = pa;
+			pc = pa;
+			pa = pa->Next;
+		}
+		else
+		{
+			pc->Next = pb;
+			pc = pb;
+			pb = pb->Next;
+		}	
+	}
+	pc->Next = pa ? pa : pb;
+	free(Lb);
 }

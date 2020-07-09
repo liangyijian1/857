@@ -143,6 +143,7 @@
     <ClCompile Include="练习.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="DNode.h" />
     <ClInclude Include="Linklist.h" />
     <ClInclude Include="SqlList.h" />
   </ItemGroup>

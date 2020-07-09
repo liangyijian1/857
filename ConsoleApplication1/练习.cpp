@@ -2,15 +2,17 @@
 #include<stdlib.h>
 #include"Linklist.h"
 #include"SqlList.h"
+#include"DNode.h"
 
 using namespace std;
 
 int main() {
-    Linklist L;
-    CreatList_L_2(L,4);
-    Dis_L(L);
-    Insert_LNode(L, 1, 100);
-    Dis_L(L);
-    Del_List(L, 1);
-    Dis_L(L);
+    DLinklist L;
+    int num;
+    Create_DNode_1(L, 5);
+    Dis_DNode(L);
+    Insert_DNode(L, 3, 99);
+    Dis_DNode(L);
+    Dele_DNode(L, 4, num);
+    Dis_DNode(L);
 }

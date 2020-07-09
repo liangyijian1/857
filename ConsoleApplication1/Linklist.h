@@ -10,8 +10,7 @@ typedef struct LNode {
 }LNode,*Linklist;
 
 void Dis_L(Linklist L) {
-	Linklist s = (Linklist)malloc(sizeof(LNode));
-	s = L->Next;
+	Linklist s= L->Next;
 	while (s) {
 		cout << s->data<<"\t";
 		s = s->Next;

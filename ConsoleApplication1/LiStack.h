@@ -3,6 +3,8 @@
 using namespace std;
 #define ElemType int
 
+int cnt=0;
+
 typedef struct LinkStack {
 	ElemType data;
 	struct LinkStack* next;
@@ -58,4 +60,38 @@ void Dis_LinkStack(LiStack top) {
 		p = p->next;
 	}
 	cout << "\n";
+}
+
+//ÊýÖµ×ª»»
+void convertion(int n, int d) {
+	LiStack L;
+	int k, e;
+	Init_LiStack(L);
+	while (n>0)
+	{
+		k = n % d;
+		push2(L, k);
+		n = n / d;
+	}
+	while (L)
+	{
+		Pop2(L, e);
+		cout << e ;
+	}
+}
+
+void move(int id, char from, char to) {
+	cnt++;
+	cout << cnt << ":" << from << "\tto\t" << to << endl;
+}
+
+void hanoi(int n, char x, char y, char z) {
+	if (n == 1)
+		move(1, x, z);
+	else
+	{
+		hanoi(n - 1, x, z, y);
+		move(n, x, z);
+		hanoi(n - 1, y, x, z);
+	}
 }

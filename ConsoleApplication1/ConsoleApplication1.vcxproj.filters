@@ -30,6 +30,9 @@
     <ClInclude Include="LiStack.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="SqQueue.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="练习.cpp">

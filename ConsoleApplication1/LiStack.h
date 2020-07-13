@@ -11,12 +11,12 @@ typedef struct LinkStack {
 }*LiStack;
 
 
-//³õÊ¼»¯
+//åˆå§‹åŒ–
 void Init_LiStack(LiStack& top) {
 	top = NULL;
 }
 
-//Õ»¿Õ
+//æ ˆç©º
 bool StackEmpty2(LiStack top) {
 	if (!top)
 		return true;
@@ -24,7 +24,7 @@ bool StackEmpty2(LiStack top) {
 		return false;
 }
 
-//½øÕ»,²»´øÍ·½áµãµÄµ¥Á´±í£¬topÖ¸ÏòÕ»¶¥
+//è¿›æ ˆ,ä¸å¸¦å¤´ç»“ç‚¹çš„å•é“¾è¡¨ï¼ŒtopæŒ‡å‘æ ˆé¡¶
 bool push2(LiStack& top, ElemType e) {
 	LiStack p;
 	p = (LiStack)malloc(sizeof(LinkStack));
@@ -41,7 +41,7 @@ bool push2(LiStack& top, ElemType e) {
 	return true;
 }
 
-//µ¯Õ»
+//å¼¹æ ˆ
 bool Pop2(LiStack& top, ElemType& e) {
 	if (StackEmpty2(top))
 		return false;
@@ -51,7 +51,7 @@ bool Pop2(LiStack& top, ElemType& e) {
 	free(p);
 }
 
-//Êä³ö
+//è¾“å‡º
 void Dis_LinkStack(LiStack top) {
 	LiStack p = top;
 	while (p)
@@ -62,7 +62,7 @@ void Dis_LinkStack(LiStack top) {
 	cout << "\n";
 }
 
-//ÊıÖµ×ª»»
+//æ•°å€¼è½¬æ¢
 void convertion(int n, int d) {
 	LiStack L;
 	int k, e;
@@ -80,6 +80,7 @@ void convertion(int n, int d) {
 	}
 }
 
+//æ±‰è¯ºå¡”é€’å½’
 void move(int id, char from, char to) {
 	cnt++;
 	cout << cnt << ":" << from << "\tto\t" << to << endl;

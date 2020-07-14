@@ -145,6 +145,7 @@
   <ItemGroup>
     <ClInclude Include="DNode.h" />
     <ClInclude Include="Linklist.h" />
+    <ClInclude Include="LinkQueue.h" />
     <ClInclude Include="LiStack.h" />
     <ClInclude Include="SqlList.h" />
     <ClInclude Include="SqQueue.h" />

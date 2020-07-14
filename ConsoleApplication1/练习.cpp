@@ -1,6 +1,6 @@
 ﻿#include<iostream>
 #include<stdlib.h>
-#include"LiStack.h"
+#include"LinkQueue.h"
 
 using namespace std;
 
